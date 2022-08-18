@@ -2,6 +2,7 @@ import React from 'react';
 import Navigator from './src/navigator/StackNavigator';
 import {ThemeProvider} from './src/context/Theme/ThemeContex';
 import {StatusBar} from 'react-native';
+import {Tabs} from './src/navigator/TabNavigator';
 const App = () => {
   return (
     <>
@@ -11,7 +12,8 @@ const App = () => {
         barStyle={'light-content'}
       />
       <ThemeProvider>
-        <Navigator />
+        <Tabs />
+        {/* <Navigator /> */}
       </ThemeProvider>
     </>
   );

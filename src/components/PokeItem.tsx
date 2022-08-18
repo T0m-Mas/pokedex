@@ -76,7 +76,7 @@ export const PokeItem = ({
             width: 0,
             height: 2,
           },
-          shadowOpacity: 0.8,
+          shadowOpacity: 0.5,
           shadowRadius: 2,
         }}>
         <View

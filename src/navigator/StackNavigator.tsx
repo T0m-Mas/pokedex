@@ -1,4 +1,3 @@
-import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import React, {useContext} from 'react';
 import {HomeScreen} from '../screens/HomeScreen';
@@ -18,18 +17,16 @@ const StackNavigator = () => {
   SystemNavigationBar.setNavigationColor(theme.colors.background);
   SystemNavigationBar.lightNavigationBar(true);
   return (
-    <NavigationContainer theme={theme}>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-          gestureEnabled: true,
-          gestureDirection: 'vertical',
-          animationEnabled: false,
-        }}>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="PokemonScreen" component={PokemonScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        gestureEnabled: true,
+        gestureDirection: 'vertical',
+        animationEnabled: false,
+      }}>
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="PokemonScreen" component={PokemonScreen} />
+    </Stack.Navigator>
   );
 };
 
